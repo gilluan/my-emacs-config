@@ -1,0 +1,1 @@
+("~/workspace/estudos/angular-testes/" "~/workspace/estudos/teste-angular3/" "~/workspace/sicoob/sicoob-componentes/" "~/workspace/angular/")

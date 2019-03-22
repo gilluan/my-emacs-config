@@ -1,0 +1,24 @@
+(setq package-archives '(("gnu" . "https://elpa.gnu.org/packages/")
+                     ("melpa" . "https://melpa.org/packages/")))
+
+
+(set-background-color "honeydew")
+
+(electric-pair-mode 1)
+
+(global-subword-mode 1)
+
+(global-hl-line-mode 1)
+
+(show-parem-mode 1)
+
+(set-language-environment "UTF-8")
+
+(setq make-backup-files nil)
+
+(setq auto-save-default nil)
+(global-auto-revert-mode 1)
+
+
+
+
