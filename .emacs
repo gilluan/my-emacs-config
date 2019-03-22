@@ -31,6 +31,11 @@
 ;; high-contrast zenburn theme (M-x package-list-packages to install)
 (load-theme 'hc-zenburn t)
 
+
+;; auto insert closing bracket
+(electric-pair-mode 1)
+
+
 ;; no tool bar
 (tool-bar-mode 0)
 
@@ -73,7 +78,8 @@
 
 ;; ########################   My customizations ################ ;;
 
-
+;; COMPANY MODE
+(add-hook 'after-init-hook 'global-company-mode)
 
 ;; ######################### TIDE CONFIG ######################## ;;
 
@@ -87,7 +93,7 @@
   ;; company is an optional dependency. You have to
   ;; install it separately via package-install
   ;; `M-x package-install [ret] company`
-  (company-mode +1))
+  (global-company-mode +1))
 
 ;; aligns annotation to the right hand side
 (setq company-tooltip-align-annotations t)
@@ -97,8 +103,24 @@
 
 (add-hook 'typescript-mode-hook #'setup-tide-mode)
 
-;; INDIUM
+(setq tide-format-options
+			'(:indentSize 2
+										:tabSize 2))
 
+
+;; IDENTATION
+
+
+
+;; INDIUM
+(require 'indium)
+(add-hook 'js-mode-hook #'indium-interaction-mode)
+
+
+;; REACT
+(add-to-list 'auto-mode-alist '("(components|containers)+\\/.*\\.js+\\'" . rjsx-mode))
+;; IMPORTANT: npm install import-js -g
+(add-hook 'after-save-hook 'import-js-fix)
 
 
 ;; HELM
@@ -113,12 +135,16 @@
 (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
 
 
+
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages (quote (paredit indium projectile helm tide))))
+ '(package-selected-packages
+   (quote
+    (import-js rjsx-mode paredit indium projectile helm tide))))
 
 
 (custom-set-faces
