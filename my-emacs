@@ -97,10 +97,6 @@
 
 (add-hook 'typescript-mode-hook #'setup-tide-mode)
 
-;; INDIUM
-
-
-
 ;; HELM
 
 (require 'helm-config)
@@ -118,7 +114,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages (quote (paredit indium projectile helm tide))))
+ '(package-selected-packages (quote (projectile helm tide))))
 
 
 (custom-set-faces
