@@ -1,1 +1,1 @@
-("~/workspace/cacau/frontend/" "~/workspace/estudos/angular-testes/" "~/workspace/sicoob/sic-componentes/" "~/workspace/sicoob/angular-seed/" "~/workspace/estudos/teste-angular3/" "~/workspace/sicoob/sicoob-componentes/" "~/workspace/angular/")
+("c:/workspace/2ledger/assinador/")
