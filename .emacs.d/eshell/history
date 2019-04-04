@@ -1,0 +1,47 @@
+ls
+ls
+clear
+
+cd ..
+ls
+cd ..
+cd ..
+ls
+git status
+git add .
+git commit -m "Adicionando 	a funcao"
+git push
+clear
+
+ls
+clear
+
+ll
+clear
+
+ls
+ll
+clear
+
+cls
+clear
+
+git status
+clear
+
+ls
+npx install-peerdeps --dev eslint-config-airbnb
+ping 104.16.25.35
+ping www.google.com
+ls
+clear
+
+sudo npm i
+npm test
+npm test
+npm testk
+npm start
+ls
+clear
+
+git status

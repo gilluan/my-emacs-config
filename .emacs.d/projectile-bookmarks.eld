@@ -1,1 +1,1 @@
-("c:/workspace/2ledger/assinador/")
+("~/workspace/blockchain/assinador/" "~/workspace/sicoob/angular-seed/" "~/workspace/estudos/angular-testes/" "~/workspace/cacau/frontend/" "~/workspace/sicoob/sicoob-cob-poc-cedente/" "~/workspace/sicoob/sic-componentes/" "~/workspace/clojure/clojure-estudos/" "~/workspace/cacau/tinylogin/")
