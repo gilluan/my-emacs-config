@@ -40,6 +40,8 @@
   (define-key helm-map (kbd "S-SPC") 'helm-toggle-visible-mark)
   (define-key helm-find-files-map (kbd "C-k") 'helm-find-files-up-one-level))
 
+;; multi-term
+(require 'multi-term)
 
 (use-package helm-projectile
   :bind (("C-S-P" . helm-projectile-switch-project)
@@ -52,11 +54,23 @@
     "pa" 'helm-projectile-find-file-in-known-projects
     ))
 
+;; ORG MODE
+
+(require 'org)
+(define-key global-map "\C-cl" 'org-store-link)
+(define-key global-map "\C-ca" 'org-agenda)
+(setq org-log-done t)
 
 ;; EVIL MODE
 (require 'evil)
 (evil-mode 1)
 (global-evil-leader-mode)
+
+
+;; LINUM-RELATIVE
+
+(require 'linum-relative)
+(linum-on)
 
 ;; POWERLINE
 
@@ -114,7 +128,7 @@
 (setq ring-bell-function 'ignore)
 
 ;; font size
-(set-face-attribute 'default nil :height 120)
+(set-face-attribute 'default nil :height 90)
 
 ;; turn on line and column numbers
 (setq line-number-mode t)
@@ -204,7 +218,7 @@
     ("b9e9ba5aeedcc5ba8be99f1cc9301f6679912910ff92fdf7980929c2fc83ab4d" "c74e83f8aa4c78a121b52146eadb792c9facc5b1f02c917e3dbb454fca931223" "a27c00821ccfd5a78b01e4f35dc056706dd9ede09a8b90c6955ae6a390eb1c1e" "84d2f9eeb3f82d619ca4bfffe5f157282f4779732f48a5ac1484d94d5ff5b279" "3c83b3676d796422704082049fc38b6966bcad960f896669dfc21a7a37a748fa" default)))
  '(package-selected-packages
    (quote
-    (helm-ag evil-leader helm-projectile smart-mode-line-atom-one-dark-theme smart-mode-line-powerline-theme smart-mode-line evil magit multi-term 2048-game import-js rjsx-mode paredit indium projectile helm tide)))
+    (linum-relative helm-ag evil-leader helm-projectile smart-mode-line-atom-one-dark-theme smart-mode-line-powerline-theme smart-mode-line evil magit multi-term 2048-game import-js rjsx-mode paredit indium projectile helm tide)))
  '(sml/mode-width
    (if
        (eq
